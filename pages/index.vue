@@ -1,8 +1,6 @@
 <script setup>
 // envファイルにある内容を変数に格納
 const config = useRuntimeConfig();
-const env = process.server ? 'Server' : 'Client';
-console.log(env)
 
 // データを取得
 // asyncがないのが不思議
