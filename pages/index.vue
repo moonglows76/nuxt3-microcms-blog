@@ -1,4 +1,7 @@
 <script setup>
+// マウスの座標を取得
+const { x, y } = useMouse()
+
 // envファイルにある内容を変数に格納
 const config = useRuntimeConfig();
 
@@ -21,5 +24,6 @@ const { data } = await useFetch("/blog", {
         <nuxt-link :to="`/${article.id}`">{{ article.title }}</nuxt-link>
       </li>
     </ul>
+    Mouse position is at: {{ x }}, {{ y }}
   </div>
 </template>
